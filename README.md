@@ -51,3 +51,5 @@ pnpm smoke
 ## Deployment
 
 The repo includes a GitHub Actions workflow that builds with pnpm and deploys `dist/` to GitHub Pages from `main`.
+
+GitHub Pages from a private repository requires a GitHub plan that supports Pages on private repos, such as GitHub Pro, Team, or Enterprise. On GitHub Free, keep the repository private for source review and either upgrade the plan or make the repository public before rerunning the workflow. See GitHub's Pages availability docs: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
