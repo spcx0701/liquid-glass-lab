@@ -1,0 +1,24 @@
+{
+  "name": "liquid-glass-lab",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "smoke": "playwright test"
+  },
+  "packageManager": "pnpm@11.10.0",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@vitest/ui": "^4.1.9",
+    "jsdom": "^29.1.1",
+    "playwright": "^1.61.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vitest": "^4.1.9"
+  }
+}
