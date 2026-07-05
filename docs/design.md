@@ -12,6 +12,8 @@ The UI layer in `src/ui/LiquidGlassLab.tsx` is the React port. `MacOSGlassSurfac
 
 The page uses a live canvas backdrop so refraction and blur effects have dynamic visual content under the glass. React owns state and interactions; CSS handles the visible glass treatment through `backdrop-filter`, borders, highlights, and SVG displacement.
 
+The deeper native stack is documented in `docs/compositor-metal-analysis.md`. That analysis follows the same material from CoreMaterial resources into AppKit `NSGlassEffectView`, Core Animation `CABackdropLayer`/`CAFilter`, QuartzCore Metal shader libraries, IOSurface, SkyLight, and WindowServer-level composition.
+
 ## Component Coverage
 
 The catalog intentionally includes the surfaces missing from most open-source implementations: toolbar/search, sheet, dock, inspector, accessibility settings, and recipe matrix, not just cards and buttons.

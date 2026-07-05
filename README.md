@@ -32,6 +32,8 @@ The implementation ports the locally analyzed macOS Liquid Glass recipe model in
 
 This project does not copy Apple private source or binary implementation internals. The actual macOS Liquid Glass pipeline includes private WindowServer composition, AppKit/SwiftUI runtime behavior, and CoreMaterial resources that are not fully public API. This lab is a React port of the observed recipe shape and public SwiftUI semantics into browser primitives.
 
+For the lower compositor and Metal path, see [`docs/compositor-metal-analysis.md`](docs/compositor-metal-analysis.md). It traces the stack from public glass APIs through CoreMaterial recipes, AppKit glass views, Core Animation backdrop filters, QuartzCore Metal shaders, IOSurface, SkyLight, and WindowServer-level composition.
+
 ## Development
 
 ```bash
