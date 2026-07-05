@@ -1,8 +1,8 @@
 # Liquid Glass Lab
 
-Interactive Liquid Glass engine and component lab for GitHub Pages.
+Interactive React Liquid Glass engine and component lab for GitHub Pages.
 
-The implementation combines a pure TypeScript engine, CoreMaterial-inspired recipe tables, SVG displacement, CSS backdrop filtering, and a live canvas backdrop so every surface can be inspected in one browser page.
+The implementation ports the locally analyzed macOS Liquid Glass recipe model into React components. A pure TypeScript engine keeps the CoreMaterial-inspired recipe tables and transition math, while `MacOSGlassSurface` maps those recipes into React props, CSS variables, SVG displacement, CSS backdrop filtering, and a live canvas backdrop.
 
 ## Included Effects
 
@@ -30,7 +30,7 @@ The implementation combines a pure TypeScript engine, CoreMaterial-inspired reci
 
 ## Boundary
 
-This project does not claim to reproduce Apple private implementation internals. The actual macOS Liquid Glass pipeline includes private WindowServer composition, AppKit/SwiftUI runtime behavior, and CoreMaterial resources that are not fully public API. This lab implements a faithful, inspectable web approximation using public browser primitives and the locally observed recipe shape.
+This project does not copy Apple private source or binary implementation internals. The actual macOS Liquid Glass pipeline includes private WindowServer composition, AppKit/SwiftUI runtime behavior, and CoreMaterial resources that are not fully public API. This lab is a React port of the observed recipe shape and public SwiftUI semantics into browser primitives.
 
 ## Development
 
@@ -51,5 +51,3 @@ pnpm smoke
 ## Deployment
 
 The repo includes a GitHub Actions workflow that builds with pnpm and deploys `dist/` to GitHub Pages from `main`.
-
-GitHub Pages from a private repository requires a GitHub plan that supports Pages on private repos, such as GitHub Pro, Team, or Enterprise. On GitHub Free, keep the repository private for source review and either upgrade the plan or make the repository public before rerunning the workflow. See GitHub's Pages availability docs: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
